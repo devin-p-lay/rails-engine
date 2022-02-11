@@ -90,32 +90,33 @@ describe 'The Merchants API' do
     end
   end
 
-  describe 'find merchant' do
+  describe 'search find all merchants' do
     it 'can find all merchants by name' do
-      merchant1 = create :merchant, { name: 'bob' }
-      merchant2 = create :merchant, { name: 'bill' }
-      merchant3 = create :merchant, { name: 'ralph' }
+      merchant1 = Merchant.create!(name: "Vegan Treats")
+      merchant2 = Merchant.create!(name: 'Plant Based')
+      merchant3 = Merchant.create!(name: "All Vegan Eats")
+      name = 'Vegan'
+      get "/api/v1/merchants/find_all?name=#{name}"
 
-      get '/api/v1/merchants/find_all?name=b'
+      parsed = JSON.parse(response.body, symbolize_names: true)
+      merchant = parsed[:data]
+      expect(response).to be_successful
 
-      # expect(response).to be_successful
-
-      data = JSON.parse(response.body, symbolize_names: true)
-
-      names = data[:data].map do |merchant|
-        require "pry"; binding.pry
-        merchant[:attributes][:name]
-      end
-
-      expect(names).to eq [merchant2.name, merhcant1.name]
+      expect(merchant.first[:attributes][:name]).to eq(merchant3.name)
+      expect(merchant.second[:attributes][:name]).to eq(merchant1.name)
     end
 
-    it 'returns an empty array if no names match' do
-      get '/api/v1/merchants/find_all?name=b'
+    it 'gives an error if there are no matches for all' do
+      merchant1 = Merchant.create!(name: "Vegan Treats")
+      merchant2 = Merchant.create!(name: 'Plant Based')
+      merchant3 = Merchant.create!(name: "All Vegan Eats")
+      name = 'asdf'
+      get "/api/v1/merchants/find_all?name=#{name}"
 
-      # expect(response).to be_successful
-      data = JSON.parse(response.body, symbolize_names: true )
-      expect(data[:data]).to eq []
+      parsed = JSON.parse(response.body, symbolize_names: true)
+      merchant = parsed[:data]
+
+      expect(merchant).to eq([])
     end
   end
 end

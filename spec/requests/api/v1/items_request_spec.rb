@@ -84,6 +84,39 @@ describe 'The Items API' do
     get "/api/v1/items/#{item.id}/merchant"
     expect(response).to be_successful
   end
+
+  describe 'Search Items' do
+    it 'can find one item by name search' do
+      merchant = create(:merchant)
+      item1 = create(:item, name: 'Veganaise', merchant_id: merchant.id)
+      item2 = create(:item, name: 'Vegan Toothpaste', merchant_id: merchant.id)
+      item3 = create(:item, name: 'Plant Based Sandals', merchant_id: merchant.id)
+      item4 = create(:item, name: 'Vitamins for vegans', merchant_id: merchant.id)
+      name = 'Vegan'
+      get "/api/v1/items/find?name=#{name}"
+
+      parsed = JSON.parse(response.body, symbolize_names: true)
+      item = parsed[:data]
+      expect(response).to be_successful
+
+      expect(item[:attributes][:name]).to eq(item2.name)
+    end
+
+    it 'returns an error if there are no matches' do
+      merchant = create(:merchant)
+      item1 = create(:item, name: 'Veganaise', merchant_id: merchant.id)
+      item2 = create(:item, name: 'Vegan Toothpaste', merchant_id: merchant.id)
+      item3 = create(:item, name: 'Plant Based Sandals', merchant_id: merchant.id)
+      item4 = create(:item, name: 'Vitamins for vegans', merchant_id: merchant.id)
+      name = 'vgan'
+      get "/api/v1/items/find?name=#{name}"
+
+      parsed = JSON.parse(response.body, symbolize_names: true)
+      item = parsed[:data]
+
+      expect(item).to eq({ error: 'No item matches search parameters' })
+    end
+  end
 end
 
 
