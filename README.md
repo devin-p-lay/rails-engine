@@ -94,7 +94,7 @@ As it runs, it will show you which tests are passing or failing.
 4. Run migrations: 'rails db:migrate'
 5. Setup [SimpleCov]() to track test coverage in your rails-engine API project. 
 6. Download [rails-engine-development.pgdump]() and move it into the '/db/' folder in another folder called '/data/', so your project files look like this: 
-```ruby
+```md
 /app
 /bin
 /config
