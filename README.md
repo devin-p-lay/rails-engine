@@ -36,17 +36,16 @@ Testing: [rspec-rails](https://github.com/rspec/rspec-rails), [simplecov](https:
 
 API: [jsonapi-serializer](https://github.com/fotinakis/jsonapi-serializers)
 
-#### Postman
+## Postman
 
-We have adapted this project from previous cohorts and have rewritten a fully functional test suite right within Postman. By importing the JSON files noted below, you can open the Postman “Runner” and execute a large suite of tests.
+#### Importing the Test Suite
 
-Note: not ALL of the Postman tests will be passing in order to pass the project. You will need to examine the tests you NEED to run, since we’re giving students some choice in how to build the application.
-
-Importing the Test Suite
 Download the test suites for Postman:
 
-[Rails Engine, Section 1](https://backend.turing.edu/module3/projects/rails_engine_lite/RailsEngineSection1.postman_collection.json)
-[Rails Engine, Section 2](https://backend.turing.edu/module3/projects/rails_engine_lite/RailsEngineSection2.postman_collection.json)
+- [Rails Engine, Section 1](https://backend.turing.edu/module3/projects/rails_engine_lite/RailsEngineSection1.postman_collection.json)
+- [Rails Engine, Section 2](https://backend.turing.edu/module3/projects/rails_engine_lite/RailsEngineSection2.postman_collection.json)
+
+
 Click on each link to load it in your browser, then hit Cmd-S to save it to your system.
 
 In Postman, in the top left corner, click on the “Import” button, and use the file selector to locate the two files on your operating system.
@@ -55,7 +54,7 @@ Next, you’ll “confirm” the import. The test suite should display as a “P
 
 Within your collections in Postman, you should see two collections– “Rails Engine Lite, Part 1”, and “Rails Engine Lite, Part 2”.
 
-*Running the Tests*
+Running the Tests
 There are two ways to run the test suite: one endpoint at a time, or the whole suite.
 
 Running one endpoint at a time
