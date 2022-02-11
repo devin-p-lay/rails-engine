@@ -111,7 +111,7 @@ As it runs, it will show you which tests are passing or failing.
 
 ----------
 
-### Local Setup 
+### Getting Started 
 
 1.  Fork and Clone the repo 
 2.  Install gem packages: 'bundle install' 
