@@ -1,5 +1,7 @@
 # README
 
+![Frame 2](http://4.bp.blogspot.com/_1OtpoORxJIM/TUhJEOe9eWI/AAAAAAAADIY/yPGvKCFf4x0/s1600/I%2Bthink%2BI%2Bcan_train.jpg)
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
