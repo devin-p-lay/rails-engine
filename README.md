@@ -9,7 +9,7 @@ This is a back-end project designed to exercise the fundamental basics of exposi
 
 Reference: [rails-engine](https://backend.turing.edu/module3/projects/rails_engine_lite/)
 
-#### Learning Goals for Rails-Engine
+## Learning Goals for Rails-Engine
 
 Explicit
 - Expose an API
@@ -25,20 +25,18 @@ Implicit
 - Breaking down a problem into small steps 
 - Practice individual research (articles, videos, mentors)
 
-#### Versions 
+### Versions 
 
 - Ruby 2.7.2
 - Rails 5.2.6
 
-#### Important gems
+### Important gems
 
 Testing: [rspec-rails](https://github.com/rspec/rspec-rails), [simplecov](https://github.com/simplecov-ruby/simplecov)
 
 API: [jsonapi-serializer](https://github.com/fotinakis/jsonapi-serializers)
 
-## Postman
-
-#### Importing the Test Suite
+### Postman
 
 Download the test suites for Postman:
 
@@ -54,10 +52,11 @@ Next, you’ll “confirm” the import. The test suite should display as a “P
 
 Within your collections in Postman, you should see two collections– “Rails Engine Lite, Part 1”, and “Rails Engine Lite, Part 2”.
 
-Running the Tests
+### Running the Tests
+
 There are two ways to run the test suite: one endpoint at a time, or the whole suite.
 
-Running one endpoint at a time
+#### Running one endpoint at a time
 As you develop your endpoints, run “rails s” and find the appropriate endpoint within the Postman collection you imported. For example, “Get All Merchants”. When you select “Get All Merchants” from the list, you should see a Postman tab open, pre-populated with everything you need to connect to the endpoint in your code and see if it works correctly.
 
 Click the “Send” button in the top right corner.
@@ -70,7 +69,8 @@ The error messages aren’t that great, but we’re here to help you diagnose th
 
 IMPORTANT some of the endpoints include EDGE CASE testing, which should be saved as “extension” work.
 
-Running the full test suite
+#### Running the full test suite
+
 In the bottom right corner of the Postman interface, you’ll see a “Runner” button. Click that and a new panel will appear. From here, you can drag one of the three “Rails Engine” collections to the right side of the screen.
 
 Next, you can select/deselect which tests you’d like to run. Finally, click the “Run Rails Engine” button.
@@ -78,7 +78,7 @@ Next, you can select/deselect which tests you’d like to run. Finally, click th
 As it runs, it will show you which tests are passing or failing.
 
 
-
+----------
 
 
 
