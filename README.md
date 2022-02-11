@@ -120,5 +120,8 @@ As it runs, it will show you which tests are passing or failing.
 ### Running the test
 
 Run 'bundle exec rspec' to run the test suite
+
+
+
 ----------
 ----------
