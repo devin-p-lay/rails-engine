@@ -89,4 +89,33 @@ describe 'The Merchants API' do
       end
     end
   end
+
+  describe 'find merchant' do
+    it 'can find all merchants by name' do
+      merchant1 = create :merchant, { name: 'bob' }
+      merchant2 = create :merchant, { name: 'bill' }
+      merchant3 = create :merchant, { name: 'ralph' }
+
+      get '/api/v1/merchants/find_all?name=b'
+
+      # expect(response).to be_successful
+
+      data = JSON.parse(response.body, symbolize_names: true)
+
+      names = data[:data].map do |merchant|
+        require "pry"; binding.pry
+        merchant[:attributes][:name]
+      end
+
+      expect(names).to eq [merchant2.name, merhcant1.name]
+    end
+
+    it 'returns an empty array if no names match' do
+      get '/api/v1/merchants/find_all?name=b'
+
+      # expect(response).to be_successful
+      data = JSON.parse(response.body, symbolize_names: true )
+      expect(data[:data]).to eq []
+    end
+  end
 end
