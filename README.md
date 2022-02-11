@@ -7,7 +7,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-this-project">About This Project</a>
+      <a href="#project-description">About This Project</a>
       <ul>
         <li><a href="#learning-goals-for-project">Learning Goals for Project</a></li>
       </ul>
