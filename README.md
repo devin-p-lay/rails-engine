@@ -9,6 +9,8 @@ This is a back-end project designed to exercise the fundamental basics of exposi
 
 Reference: [rails-engine](https://backend.turing.edu/module3/projects/rails_engine_lite/)
 
+----------
+
 ## Learning Goals for Rails-Engine:
 
 Explicit
@@ -25,16 +27,22 @@ Implicit
 - Breaking down a problem into small steps 
 - Practice individual research (articles, videos, mentors)
 
+----------
+
 ### Versions 
 
 - Ruby 2.7.2
 - Rails 5.2.6
 
+----------
+
 ### Important gems
 
-Testing: [rspec-rails](https://github.com/rspec/rspec-rails), [simplecov](https://github.com/simplecov-ruby/simplecov)
+Testing: [rspec-rails](https://github.com/rspec/rspec-rails), [simplecov](https://github.com/simplecov-ruby/simplecov), [factory_bot_rails](https://github.com/thoughtbot/factory_bot_rails), [faker](https://github.com/vajradog/faker-rails)
 
 API: [jsonapi-serializer](https://github.com/fotinakis/jsonapi-serializers)
+
+----------
 
 ### Postman
 
@@ -78,7 +86,27 @@ As it runs, it will show you which tests are passing or failing.
 
 ----------
 
+### Local Setup 
 
+1. Fork and Clone the repo 
+2. Install gem packages: 'bundle install' 
+3. Setup the database: 'rails db:create' 
+4. Run migrations: 'rails db:migrate'
+5. Setup [SimpleCov]() to track test coverage in your rails-engine API project. 
+6. Download [rails-engine-development.pgdump]() and move it into the '/db/' folder in another folder called '/data/', so your project files look like this: 
+```ruby
+/app
+/bin
+/config
+/db
+  /data 
+    rails-engine-development.pgdump 
+  seeds.rb 
+'/db/data/'
+/lib 
+/log 
+etc
+```
 
 
 
