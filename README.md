@@ -3,6 +3,31 @@
 
 ![Frame 2](http://4.bp.blogspot.com/_1OtpoORxJIM/TUhJEOe9eWI/AAAAAAAADIY/yPGvKCFf4x0/s1600/I%2Bthink%2BI%2Bcan_train.jpg)
 
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-this-project">About This Project</a>
+      <ul>
+        <li><a href="#learning-goals-for-project">Learning Goals for Project</a></li>
+      </ul>
+      <ul>
+        <li><a href="#versions">Versions</a></li>
+      </ul>
+      <ul>
+        <li><a href="#important-gems">Important Gems</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#postman">Postman</a>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+    </li>
+    <li><a href="#running-the-test">Running the test</a></li>
+  </ol>
+</details>
+
 ## Project Description 
 
 This is a back-end project designed to exercise the fundamental basics of exposing an API. You are working for a company developing an E-Commerce Application. Your team is working in a service-oriented architecture, meaning the front and back ends of this application are separate and communicate via APIs. Your job is to expose the data that powers the site through an API that the front end will consume.
@@ -11,7 +36,7 @@ Reference: [rails-engine](https://backend.turing.edu/module3/projects/rails_engi
 
 ----------
 
-## Learning Goals for Rails-Engine:
+## Learning Goals for Project:
 
 Explicit
 - Expose an API
