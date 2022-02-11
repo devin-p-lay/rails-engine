@@ -89,4 +89,34 @@ describe 'The Merchants API' do
       end
     end
   end
+
+  describe 'search find all merchants' do
+    it 'can find all merchants by name' do
+      merchant1 = Merchant.create!(name: "Vegan Treats")
+      merchant2 = Merchant.create!(name: 'Plant Based')
+      merchant3 = Merchant.create!(name: "All Vegan Eats")
+      name = 'Vegan'
+      get "/api/v1/merchants/find_all?name=#{name}"
+
+      parsed = JSON.parse(response.body, symbolize_names: true)
+      merchant = parsed[:data]
+      expect(response).to be_successful
+
+      expect(merchant.first[:attributes][:name]).to eq(merchant3.name)
+      expect(merchant.second[:attributes][:name]).to eq(merchant1.name)
+    end
+
+    it 'gives an error if there are no matches for all' do
+      merchant1 = Merchant.create!(name: "Vegan Treats")
+      merchant2 = Merchant.create!(name: 'Plant Based')
+      merchant3 = Merchant.create!(name: "All Vegan Eats")
+      name = 'asdf'
+      get "/api/v1/merchants/find_all?name=#{name}"
+
+      parsed = JSON.parse(response.body, symbolize_names: true)
+      merchant = parsed[:data]
+
+      expect(merchant).to eq([])
+    end
+  end
 end
