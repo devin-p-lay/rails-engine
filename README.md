@@ -1,4 +1,4 @@
-# README
+# README - Rails Engine
 
 ![Frame 2](http://4.bp.blogspot.com/_1OtpoORxJIM/TUhJEOe9eWI/AAAAAAAADIY/yPGvKCFf4x0/s1600/I%2Bthink%2BI%2Bcan_train.jpg)
 
